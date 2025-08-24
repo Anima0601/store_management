@@ -1,32 +1,51 @@
 import React from "react";
+import Card from "../Card/Card";
 
 export default function HomePage() {
   return (
-    <div style={{ padding: "40px", fontFamily: "Arial, sans-serif", textAlign: "center" }}>
-      <h1 style={{ fontSize: "32px", style:"bold", marginBottom: "20px" }}>
-        🏪 Store Sphere Web Application
-      </h1>
-
-      <p style={{ fontSize: "18px", margin: "0 20px", color: "#444" }}>
-        Welcome to our <b>Store Management Platform</b>!  <br></br>
-        This web application helps users browse registered stores and submit ratings for them.  
-        Ratings range from <b>1 to 5 stars</b>, allowing customers to share their feedback and help 
-        others make better decisions.  
-      </p>
-
-      <div style={{ marginTop: "30px" }}>
-        <h2 style={{ fontSize: "24px", marginBottom: "15px" }}>✨ Features</h2>
-        <ul style={{ listStyle: "none", padding: 0, fontSize: "16px", color: "#333" }}>
-          <li>✔ Browse a list of registered stores</li>
-          <li>✔ Submit ratings (1–5 stars) for each store</li>
-          <li>✔ View average ratings and customer feedback</li>
-          <li>✔ Simple and user-friendly interface</li>
-        </ul>
-      </div>
-
-      <div style={{ marginTop: "40px", fontSize: "18px", color: "#006400" }}>
-        <b>Get started today and rate your favorite stores! ⭐</b>
+    <div>
+    <div className="hero bg-blue-100 min-h-[80vh]">
+      <div className="hero-content flex-col lg:flex-row">
+        <img
+          src="/homepageimg.jpg"
+          className="w-100 h-100 object-cover rounded-lg shadow-2xl"
+          alt="Store illustration"
+        />
+        <div className="lg:ml-10 text-center lg:text-left">
+          <h1 className="text-5xl font-bold">Manage & Rate Stores Easily</h1>
+          <p className="py-6 text-gray-600 text-lg">
+            Welcome to our <b>Store Management Platform</b>!
+            Browse through registered stores, explore details, and share your experience.
+            Users can submit <b>ratings from 1 to 5 stars</b>, helping others make informed choices while
+            providing valuable feedback for stores to improve.
+          </p>
+          <button className="btn btn-primary">Explore Stores</button>
+        </div>
       </div>
     </div>
+
+     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-10">
+        <Card
+          image="/img1car.jpg"
+          title="Nearby Stores"
+          description="Browse stores registered on our platform and find the best options near you."
+          buttonText="View Stores"
+        />
+        <Card
+          image="/img2car.jpg"
+          title="Rate & Review"
+          description="Submit your ratings (1-5 stars) and share honest reviews to help others."
+          buttonText="Give Rating"
+        />
+        <Card
+          image="/img3car.jpg"
+          title="Store Insights"
+          description="Help stores improve with feedback and explore customer-driven insights."
+          buttonText="Learn More"
+        />
+      </div>
+      </div>
+
   );
 }
+
